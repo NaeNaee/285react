@@ -6,4 +6,4 @@ before_install:
     - docker build -t e285react -f Dockerfile.dev .
 
 script:
-    - docker run e285react npm run test -- --coverage
+    - docker run -e CI=true e285react npm run test
